@@ -1,0 +1,4 @@
+this is a test
+to see if
+
+wc.c counts more than one line

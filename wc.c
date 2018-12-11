@@ -1,6 +1,7 @@
 #include <stdlib.h>
      #include <stdio.h>
      #include <stdarg.h>
+#include <ctype.h>
      
      typedef unsigned long count_t;  /* Counter type */
      
@@ -58,6 +59,9 @@
      }
      
      /* Return true if C is a valid word constituent */
+	/**
+	* This determines if the char is apart of a word
+	*/
      static int
      isword (unsigned char c)
      {
@@ -72,6 +76,9 @@
      
      /* Get next word from the input stream. Return 0 on end
         of file or error condition. Return 1 otherwise. */
+	/**
+	* This gets a word from the file
+	*/
      int
      getword (FILE *fp)
      {
@@ -102,6 +109,9 @@
      }
            
      /* Process file FILE. */
+	/**
+	* This counts the characters, word, and lines
+	*/
      void
      counter (char *file)
      {
@@ -120,7 +130,9 @@
        total_wcount += wcount;
        total_lcount += lcount;
      }
-       
+       /**
+	* This runs the program
+	*/
      int
      main (int argc, char **argv)
      {
