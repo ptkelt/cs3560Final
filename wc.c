@@ -148,3 +148,7 @@
          report ("total", total_ccount, total_wcount, total_lcount);
        return 0;
      }
+
+int countChar(){
+ return ccount;
+}

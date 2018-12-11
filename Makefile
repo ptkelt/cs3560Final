@@ -2,6 +2,7 @@
 all:
 	make build
 	make doc
+	make check
 
 build: wc.o
 	g++ wc.o -o count
@@ -16,6 +17,8 @@ clean:
 doc:
 	doxygen wc.c
 	
-
+check:
+	cppcheck wc.c
+	valgrind ./count
 
 	
